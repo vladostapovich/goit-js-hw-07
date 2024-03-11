@@ -4,8 +4,8 @@ itemsEl.forEach((item) => {
   showCategoryInfo(item);
 });
 function showCategoryInfo(elem) {
-  let categoryTitle = elem.querySelector("h2").textContent;
-  let categoryElementsCount = elem.querySelectorAll("li").length;
+  const categoryTitle = elem.querySelector("h2").textContent;
+  const categoryElementsCount = elem.querySelectorAll("li").length;
   console.log(`category: ${categoryTitle}`);
   console.log(`elements: ${categoryElementsCount}`);
 }

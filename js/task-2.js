@@ -29,7 +29,7 @@ images.forEach((img) => {
   const liItem = document.createElement("li");
   const imgEl = document.createElement("img");
   imgEl.src = img.url;
-  imgEl.atl = img.alt;
+  imgEl.alt = img.alt;
   liItem.appendChild(imgEl);
   ulEl.appendChild(liItem);
 });

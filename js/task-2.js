@@ -25,12 +25,25 @@ const images = [
   },
 ];
 const ulEl = document.querySelector(".gallery");
-images.forEach((img) => {
-  const liItem = document.createElement("li");
-  const imgEl = document.createElement("img");
-  imgEl.src = img.url;
-  imgEl.alt = img.alt;
-  liItem.appendChild(imgEl);
-  ulEl.appendChild(liItem);
-});
-console.log(ulEl);
+
+// images.forEach((img) => {
+//   const liItem = document.createElement("li");
+//   const imgEl = document.createElement("img");
+//   imgEl.src = img.url;
+//   imgEl.alt = img.alt;
+//   liItem.appendChild(imgEl);
+//   ulEl.appendChild(liItem);
+// });
+function createImg(arr) {
+  console.log(arr);
+  return arr
+    .map(
+      ({ url, alt }) => `
+    <li class="img-card"><img src="${url}" alt="${alt}"
+    </li>
+    `
+    )
+    .join("");
+}
+
+ulEl.innerHTML = createImg(images);

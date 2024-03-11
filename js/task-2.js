@@ -39,7 +39,7 @@ function createImg(arr) {
   return arr
     .map(
       ({ url, alt }) => `
-    <li class="img-card"><img src="${url}" alt="${alt}"
+    <li><img src="${url}" alt="${alt}"
     </li>
     `
     )
